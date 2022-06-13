@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>web5</title>
+    <style>
+      :root {
+        font-size: calc(100vw / 100);
+      }
+      body {
+        margin: 0;
+        text-align: center;
+        line-height: 100vh;
+        font-family: sans-serif;
+        font-size: 20rem;
+        font-weight: bold;
+        overflow: hidden;
+      }
+      .rainbow {
+        background-image: linear-gradient(
+          to right,
+          hsl(0 100% 50%),
+          hsl(30 100% 50%),
+          hsl(60 100% 50%),
+          hsl(90 100% 50%),
+          hsl(120 100% 50%),
+          hsl(150 100% 50%),
+          hsl(180 100% 50%),
+          hsl(210 100% 50%),
+          hsl(240 100% 50%),
+          hsl(270 100% 50%),
+          hsl(300 100% 50%),
+          hsl(330 100% 50%)
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        display: inline-block;
+        width: 100rem;
+        animation-name: frames;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+      @keyframes frames {
+        50% {
+          background-position-x: 100rem;
+          transform: scale(2) rotate(180deg);
+        }
+        100% {
+          background-position-x: 200rem;
+          transform: scale(1) rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <span class="rainbow">web5</span>
+  </body>
+</html>
