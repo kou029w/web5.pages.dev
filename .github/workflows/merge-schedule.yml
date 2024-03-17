@@ -1,6 +1,10 @@
 name: merge-schedule
 on:
   pull_request:
+    types:
+      - opened
+      - edited
+      - synchronize
   schedule:
     # https://crontab.guru/every-hour
     - cron: 0 * * * *
